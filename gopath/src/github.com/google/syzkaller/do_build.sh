@@ -1,0 +1,6 @@
+HOSTOS=linux \
+HOSTARCH=arm64 \
+TARGETOS=linux \
+TARGETVMARCH=arm \
+TARGETARCH=arm \
+make
