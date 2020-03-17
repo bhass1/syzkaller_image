@@ -9,10 +9,13 @@ DTB_PATH="$LINUX_KERNEL_SOURCE_PATH"arch/arm/boot/dts/vexpress-v2p-ca15-tc1.dtb
 BUILDROOT_PATH=buildroot/
 LINUX_ROOTFS_PATH="$BUILDROOT_PATH"output/images/rootfs.ext2
 
+PORT=10022
+echo "Using Port: $PORT"
+
 qemu-system-arm \
 	-m $STARTUP_RAM \
 	-smp $NUM_CPUS \
-	-net nic -net user,host=$GUEST_IP,hostfwd=tcp::10022-:22 \
+	-net nic -net user,host=$GUEST_IP,hostfwd=tcp::$PORT-:22 \
 	-display none \
 	-serial stdio \
 	-machine vexpress-a15 \
