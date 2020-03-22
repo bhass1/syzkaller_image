@@ -1,7 +1,8 @@
 STARTUP_RAM=512
 NUM_CPUS=2
 GUEST_IP=10.0.2.10
-LINUX_KERNEL_SOURCE_PATH=linux_kernels/linux-4.16.1/
+#LINUX_KERNEL_SOURCE_PATH=linux_kernels/linux-4.16.1/
+LINUX_KERNEL_SOURCE_PATH=linux_kernels/linux-3.14.51/
 KERNEL_ZIMAGE_PATH="$LINUX_KERNEL_SOURCE_PATH"arch/arm/boot/zImage
 DTB_PATH="$LINUX_KERNEL_SOURCE_PATH"arch/arm/boot/dts/vexpress-v2p-ca15-tc1.dtb
 
